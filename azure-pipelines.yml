@@ -19,7 +19,7 @@ steps:
 - task: ArtifactoryNpm@2
   inputs:
     command: 'install'
-    artifactoryService: 'basic-nitaym'
+    artifactoryService: 'nitaym-rt'
     sourceRepo: 'default-npm-local'
     collectBuildInfo: true
     threads: '10'
