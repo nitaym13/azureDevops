@@ -25,4 +25,7 @@ steps:
     threads: '10'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    includeEnvVars: true
+
+- script: |
+    npm run package
+  displayName: 'Build the package'
