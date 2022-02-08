@@ -26,6 +26,8 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 
+
 - script: |
     npm run package
   displayName: 'Build the package'
+  workingDirectory: '$(Build.SourcesDirectory)//Users/nitaym/Downloads/express_npm'
