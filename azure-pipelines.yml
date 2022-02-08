@@ -14,3 +14,15 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
+
+
+- task: ArtifactoryNpm@2
+  inputs:
+    command: 'install'
+    artifactoryService: 'basic-nitaym'
+    sourceRepo: 'default-npm-local'
+    collectBuildInfo: true
+    threads: '10'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    includeEnvVars: true
